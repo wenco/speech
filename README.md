@@ -22,6 +22,6 @@
 </pre>
 
 
-
+<a href="http://www.tuterm.com/jquery-speech/" target="_blank">演示</a>
 
 
