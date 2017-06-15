@@ -6,7 +6,8 @@
 初始参数详解：
 "speech": true, //通过点击链接播报，还是直接播报
 "lang": "zh", //语言			
-"speed": 3, //语速			
+"speed": 3, //语速	
+"http":false,//默认true 启用https		
 "sWidth": 16, //链接按钮的宽度			
 "sHeight": 13, //链接按钮的高度			
 "bg": "./image/speech.png", //链接按钮的背景图片			

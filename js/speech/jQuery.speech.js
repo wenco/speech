@@ -4,14 +4,16 @@ Date: 2016-01-11
 blog: http://www.tuterm.com
 可以任意使用，保留作者信息以溯源
 */
-;(function($) {
+;
+(function($) {
 	$.fn.speech = function(options) {
 		var defaults = {
 			"speech": true, //通过点击链接播报，还是直接播报
 			"lang": "zh", //语言			
 			"speed": 3, //语速			
 			"sWidth": 16, //链接按钮的宽度			
-			"sHeight": 13, //链接按钮的高度			
+			"sHeight": 13, //链接按钮的高度		
+			"https": true, //启用https	
 			"bg": "./image/speech.png", //链接按钮的背景图片			
 			"content": "这是一段测试内容" //直接播报内容
 		};
@@ -19,9 +21,11 @@ blog: http://www.tuterm.com
 		return this.each(function() {
 			var _this = $(this),
 				_iframe = _this.find(".speech_iframe"),
+				http = options.https ? "https" : "http",
 				content = _this.text();
 			content = (!content || content === undefined || content === null) ? options.content : content;
-			var src = 'http://tts.baidu.com/text2audio?lan=' + options.lang + '&ie=UTF-8&text=' + content + '&spd=' + options.speed;
+
+			var src = http + '//tts.baidu.com/text2audio?lan=' + options.lang + '&ie=UTF-8&text=' + content + '&spd=' + options.speed;
 			if (options.speech) {
 				//点击链接播报
 				var sClick = "<a href='javascript:void(0);' class='speech'></a>";
