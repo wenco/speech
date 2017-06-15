@@ -25,7 +25,7 @@ blog: http://www.tuterm.com
 				content = _this.text();
 			content = (!content || content === undefined || content === null) ? options.content : content;
 
-			var src = http + '//tts.baidu.com/text2audio?lan=' + options.lang + '&ie=UTF-8&text=' + content + '&spd=' + options.speed;
+			var src = http + '://tts.baidu.com/text2audio?lan=' + options.lang + '&ie=UTF-8&text=' + content + '&spd=' + options.speed;
 			if (options.speech) {
 				//点击链接播报
 				var sClick = "<a href='javascript:void(0);' class='speech'></a>";
